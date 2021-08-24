@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import { Container, Row, Navbar, Nav, NavDropdown, Button, Form, FormControl } from 'react-bootstrap';
 import './Header.scss';
 
-export class Header extends Component {
-    render() {
+function Header(props){
         return (
             <Container>
             <Row>
                 <Navbar className="col-12" bg="light" expand="lg">
-                <Navbar.Brand href="/" className="logo"><b>PRACTICE TO PERFECT</b></Navbar.Brand>
+                <Navbar.Brand href="/" className="logo"><b>{props.name}</b></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll" className="justify-content-end" style={{cssFloat: 'right' }}>
                     <Nav
@@ -29,21 +28,13 @@ export class Header extends Component {
                     <Nav.Link href="career">Career</Nav.Link>
 
                     <Nav.Link href="contact">Contact Us</Nav.Link>
-
-
-                 
-
                     </Nav>
-
                  
-                 
-
                 </Navbar.Collapse>
                 </Navbar>
             </Row>
             </Container>
         )
     }
-}
 
 export default Header

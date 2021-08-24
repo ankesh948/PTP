@@ -1,19 +1,27 @@
-import { render } from '@testing-library/react';
 import React from 'react'
-import { Row, Col, Container, Button } from 'react-bootstrap';
+import { Row, Col, Container} from 'react-bootstrap';
 
 function Home(){
 
-    function test(){
-            alert('Welcome Ankesh');
-    }
+         const [data, setData] = React.useState(true);
 
     return(
         <>
+        <Container>
+        <Row>
             <div className="py-5">
-                <h1>Welcome to Our Blog</h1>
-                <button onClick={test}>Click Me</button>
+                <h1 className="py-4" style={{backgroundColor: "blue", color: 'white'}}>Hide / Show function</h1>
+                {
+                    data? <h3>Welcome To PTP</h3>:null
+                }
+                <button onClick={()=>setData(false)}>Click Me</button>
+                <button onClick={()=>setData(true)}>Click Me</button>
+
+
+                <button onClick={()=>setData(!data)}>Toggle</button>
             </div>
+        </Row>
+        </Container>
         </>
     )
 }

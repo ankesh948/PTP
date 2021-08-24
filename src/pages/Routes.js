@@ -1,7 +1,8 @@
 import React from 'react'
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../pages/Home';
-import PageNotFound from '../pages/404'
+import Home from './Home';
+import About from './About';
+import PageNotFound from './404'
 
 
 const Routes = () => {
@@ -10,9 +11,7 @@ const Routes = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home}></Route>
-                <Route path="/" component={Home}></Route>
-                <Route exact path="/" component={Home}></Route>
-                <Route exact path="/" component={Home}></Route>
+                <Route path="/about" component={About}></Route>
                 <Route component={PageNotFound} />
             </Switch>
         </BrowserRouter>

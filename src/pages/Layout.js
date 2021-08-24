@@ -6,7 +6,7 @@ import Footer from './common/Footer';
 const Layout = () => {
     return(
         <>
-        <Header />
+        <Header name="PRACTICE TO PERFECT" />
             <Routes />
         <Footer />
         </>
